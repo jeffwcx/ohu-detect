@@ -3,7 +3,7 @@ function importAll (r) {
   r.keys().forEach(r)
 }
 
-const testsContext = require.context('./specs', true, /\.test\.js$/)
+const testsContext = require.context('./specs', true, /test\.js$/)
 
 importAll(testsContext)
 

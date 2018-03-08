@@ -1,0 +1,19 @@
+{
+  "os x safari": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36",
+    "os": {
+      "name": "os x",
+      "device": "Macintosh",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "chrome",
+      "version": "65.0.3325.146",
+      "isMobile": false
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  }
+}

@@ -6,9 +6,9 @@ export class Detector {
   constructor (ua) {
     this.ua = ua
     this._getOsStr()
-    this.detectOS(os)
-    this.detectBrowser()
-    this.detectBrowserEngine()
+    this._detectOS()
+    this._detectBrowser()
+    this._detectBrowserEngine()
   }
   _getOsStr () {
     this.osStr = this.ua.match(/\((.*?)\)/)[1]
@@ -36,17 +36,17 @@ export class Detector {
     })
   }
 
-  detectOS () {
+  _detectOS () {
     this.os = {}
     this._match(os, this.os)
   }
 
-  detectBrowserEngine () {
+  _detectBrowserEngine () {
     this.browserEngine = {}
     this._match(browserEngines, this.browserEngine)
   }
 
-  detectBrowser () {
+  _detectBrowser () {
     this.browser = {}
     this._match(browsers, this.browser)
   }
