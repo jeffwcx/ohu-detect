@@ -18,13 +18,15 @@ export class Detector {
       const mg = this.ua.match(new RegExp(item.match, 'i'))
       if (mg !== null) {
         result.name = item.name
-        for (let i = 1, j = 0; i < mg.length; i += 1, j += 1) {
-          const matchName = item.order[j]
-          let matchResult = mg[i]
-          if (item.process && item.process[matchName]) {
-            matchResult = item.process[matchName](matchResult)
+        if (item.order) {
+          for (let i = 0, j = 1; i < item.order.length; i += 1, j += 1) {
+            const matchName = item.order[i]
+            let matchResult = mg[j]
+            if (item.process && item.process[matchName]) {
+              matchResult = item.process[matchName](matchResult)
+            }
+            result[matchName] = matchResult
           }
-          result[item.order[j]] = matchResult
         }
         // if has branches
         if (item.branches) {

@@ -177,9 +177,9 @@ var Detector = function () {
 
     this.ua = ua;
     this._getOsStr();
-    this.detectOS(__WEBPACK_IMPORTED_MODULE_2__data_os__["a" /* default */]);
-    this.detectBrowser();
-    this.detectBrowserEngine();
+    this._detectOS();
+    this._detectBrowser();
+    this._detectBrowserEngine();
   }
 
   __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_createClass___default()(Detector, [{
@@ -214,20 +214,20 @@ var Detector = function () {
       });
     }
   }, {
-    key: 'detectOS',
-    value: function detectOS() {
+    key: '_detectOS',
+    value: function _detectOS() {
       this.os = {};
       this._match(__WEBPACK_IMPORTED_MODULE_2__data_os__["a" /* default */], this.os);
     }
   }, {
-    key: 'detectBrowserEngine',
-    value: function detectBrowserEngine() {
+    key: '_detectBrowserEngine',
+    value: function _detectBrowserEngine() {
       this.browserEngine = {};
       this._match(__WEBPACK_IMPORTED_MODULE_3__data_browserEngines__["a" /* default */], this.browserEngine);
     }
   }, {
-    key: 'detectBrowser',
-    value: function detectBrowser() {
+    key: '_detectBrowser',
+    value: function _detectBrowser() {
       this.browser = {};
       this._match(__WEBPACK_IMPORTED_MODULE_4__data_browsers__["a" /* default */], this.browser);
     }
@@ -501,19 +501,28 @@ function version(str) {
   return str.replace(/_/g, '.');
 }
 
+function device(str) {
+  if (str && typeof str === 'string') {
+    return str.toLowerCase();
+  }
+  return str;
+}
+
 /* harmony default export */ __webpack_exports__["a"] = ([{
   name: 'os x',
   match: '\\((\\w+);.*mac os x ([0-9_]+)',
   order: ['device', 'version'],
   process: {
-    version: version
+    version: version,
+    device: device
   }
 }, {
   name: 'ios',
   match: '\\((\\w+);.*os ([0-9_]+) like mac os x',
   order: ['device', 'version'],
   process: {
-    version: version
+    version: version,
+    device: device
   }
 }, {
   name: 'linux',

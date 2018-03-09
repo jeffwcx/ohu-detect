@@ -2,21 +2,27 @@ function version (str) {
   return str.replace(/_/g, '.')
 }
 
+function device (str) {
+  return str.toLowerCase()
+}
+
 export default [
   {
     name: 'os x',
-    match: '\\((\\w+);.*mac os x ([0-9_]+)',
+    match: '\\((\\w+);.*mac os x ([0-9_\\.]+)',
     order: ['device', 'version'],
     process: {
-      version
+      version,
+      device
     }
   },
   {
     name: 'ios',
-    match: '\\((\\w+);.*os ([0-9_]+) like mac os x',
+    match: '\\((\\w+)(?:;|\\s).*os ([0-9_\\.]+) like mac os x',
     order: ['device', 'version'],
     process: {
-      version
+      version,
+      device
     }
   },
   {
@@ -32,28 +38,23 @@ export default [
   },
   {
     name: 'windows',
-    match: 'windows',
-    branches: [
-      {
-        name: 'windows xp',
-        match: 'windows nt 5\\.[12]'
-      },
-      {
-        name: 'windows vista',
-        match: 'windows vista nt6\\.0'
-      },
-      {
-        name: 'windows 7',
-        match: 'windows nt 6\\.1'
-      },
-      {
-        name: 'windows 8',
-        match: 'windows nt 6\\.[23]'
-      },
-      {
-        name: 'windows 10',
-        match: 'windows nt (6\\.4|10)'
+    match: 'windows nt ([0-9.]+)',
+    order: ['version'],
+    process: {
+      version (str) {
+        if (str === '5.1' || str === '5.2') {
+          return 'xp'
+        } else if (str === '6.0') {
+          return 'vista'
+        } else if (str === '6.1') {
+          return '7'
+        } else if (str === '6.2' || str === '6.3') {
+          return '8'
+        } else if (str === '6.4' || str === '10.0') {
+          return '10'
+        }
+        return 'nt' + str
       }
-    ]
+    }
   }
 ]

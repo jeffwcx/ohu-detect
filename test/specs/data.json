@@ -1,19 +1,601 @@
 {
-  "os x safari": {
-    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36",
+  "windows 10 chrome": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
     "os": {
-      "name": "os x",
-      "device": "Macintosh",
-      "version": "10.13.3"
+      "name": "windows",
+      "version": "10"
     },
     "browser": {
       "name": "chrome",
-      "version": "65.0.3325.146",
-      "isMobile": false
+      "version": "63.0.3239.132"
     },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
+    }
+  },
+  "windows 10 ie11": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    "os": {
+      "name": "windows",
+      "version": "10"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "11.0"
+    },
+    "browserEngine": {
+      "name": "trident",
+      "version": "7.0"
+    }
+  },
+  "windows 10 edge": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299",
+    "os": {
+      "name": "windows",
+      "version": "10"
+    },
+    "browser": {
+      "name": "edge",
+      "version": "16.16299"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "windows 10 firefox": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0",
+    "os": {
+      "name": "windows",
+      "version": "10"
+    },
+    "browser": {
+      "name": "firefox",
+      "version": "60.0"
+    },
+    "browserEngine": {
+      "name": "gecko",
+      "version": "20100101"
+    }
+  },
+  "windows 7 chrome": {
+    "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36",
+    "os": {
+      "name": "windows",
+      "version": "7"
+    },
+    "browser": {
+      "name": "chrome",
+      "version": "64.0.3282.186"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "windows 7 firefox": {
+    "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:58.0) Gecko/20100101 Firefox/58.0",
+    "os": {
+      "name": "windows",
+      "version": "7"
+    },
+    "browser": {
+      "name": "firefox",
+      "version": "58.0"
+    },
+    "browserEngine": {
+      "name": "gecko",
+      "version": "20100101"
+    }
+  },
+  "windows 7 opera": {
+    "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.168 Safari/537.36 OPR/51.0.2830.40",
+    "os": {
+      "name": "windows",
+      "version": "7"
+    },
+    "browser": {
+      "name": "opera",
+      "version": "51.0.2830.40"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "windows 7 ie8": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)",
+    "os": {
+      "name": "windows",
+      "version": "7"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "8.0"
+    },
+    "browserEngine": {
+      "name": "trident",
+      "version": "4.0"
+    }
+  },
+  "windows xp ie6": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)",
+    "os": {
+      "name": "windows",
+      "version": "xp"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "6.0"
+    },
+    "browserEngine": {}
+  },
+  "windows vista ie8": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)",
+    "os": {
+      "name": "windows",
+      "version": "vista"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "8.0"
+    },
+    "browserEngine": {
+      "name": "trident",
+      "version": "4.0"
+    }
+  },
+  "windows 8 ie9": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.3; Trident/5.0)",
+    "os": {
+      "name": "windows",
+      "version": "8"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "9.0"
+    },
+    "browserEngine": {
+      "name": "trident",
+      "version": "5.0"
+    }
+  },
+  "unknown windows": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.5; Trident/7.0)",
+    "os": {
+      "name": "windows",
+      "version": "nt6.5"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "9.0"
+    },
+    "browserEngine": {
+      "name": "trident",
+      "version": "7.0"
+    }
+  },
+  "os x firefox": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:58.0) Gecko/20100101 Firefox/58.0",
+    "os": {
+      "name": "os x",
+      "device": "macintosh",
+      "version": "10.13"
+    },
+    "browser": {
+      "name": "firefox",
+      "version": "58.0"
+    },
+    "browserEngine": {
+      "name": "gecko",
+      "version": "20100101"
+    }
+  },
+  "os x opera": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.168 Safari/537.36 OPR/51.0.2830.40 (Edition Baidu)",
+    "os": {
+      "name": "os x",
+      "device": "macintosh",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "opera",
+      "version": "51.0.2830.40"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "os x chrome": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36",
+    "os": {
+      "name": "os x",
+      "device": "macintosh",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "chrome",
+      "version": "65.0.3325.146"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "os x safari": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+    "os": {
+      "name": "os x",
+      "device": "macintosh",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "safari",
+      "version": "11.0.3"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "604.5.6"
+    }
+  },
+  "ios safari": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1",
+    "os": {
+      "name": "ios",
+      "device": "iphone",
+      "version": "11.0"
+    },
+    "browser": {
+      "name": "safari",
+      "version": "11.0"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "604.1.38"
+    }
+  },
+  "ios ipad safari": {
+    "ua": "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1",
+    "os": {
+      "name": "ios",
+      "device": "ipad",
+      "version": "11.0"
+    },
+    "browser": {
+      "name": "safari",
+      "version": "11.0"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "604.1.34"
+    }
+  },
+  "android Galaxy S5 chrome": {
+    "ua": "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Mobile Safari/537.36",
+    "os": {
+      "name": "android",
+      "version": "5.0"
+    },
+    "browser": {
+      "name": "chrome",
+      "version": "65.0.3325.146"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 qqbrowser": {
+    "ua": "Mozilla/5.0 (Linux; U; Android 7.1.1; zh-cn; MIX 2 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/57.0.2987.132 MQQBrowser/8.2 Mobile Safari/537.36",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "qqbrowser",
+      "version": "8.2"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 uc": {
+    "ua": "Mozilla/5.0 (Linux; U; Android 7.1.1; zh-CN; MIX 2 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.8.9.969 Mobile Safari/537.36",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "uc",
+      "version": "11.8.9.969"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 sogou": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.116 Mobile Safari/537.36 SogouMSE,SogouMobileBrowser/5.11.8",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "sogou",
+      "version": "5.11.8"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 liebao": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36 LieBaoFast/4.59.2",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "liebao",
+      "version": "4.59.2"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 baidu": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/537.36 T7/10.3 baiduboxapp/10.3.6.13 (Baidu; P1 7.1.1)",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "baidu",
+      "version": "10.3.6.13"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 baidubrowser": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/537.36 T7/9.1 baidubrowser/7.18.11.0 (Baidu; P1 7.1.1)",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "baidubrowser",
+      "version": "7.18.11.0"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 qq": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/043910 Mobile Safari/537.36 V1_AND_SQ_7.5.0_794_YYB_D QQ/7.5.0.3430 NetType/WIFI WebP/0.3.0 Pixel/1080",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "qq",
+      "version": "7.5.0.3430"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 wechat": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.1.1; MIX 2 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/043909 Mobile Safari/537.36 MicroMessenger/6.6.5.1280(0x26060532) NetType/WIFI Language/zh_CN",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "wechat",
+      "version": "6.6.5.1280"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "android mix2 alipay": {
+    "ua": "Mozilla/5.0 (Linux; U; Android 7.1.1; zh-CN; MIX 2 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.6.4.950 UWS/2.11.0.46 Mobile Safari/537.36 UCBS/2.11.0.46_180226200455 NebulaSDK/1.8.100112 Nebula AlipayDefined(nt:WIFI,ws:393|0|2.75) AliApp(AP/10.1.18.708) AlipayClient/10.1.18.708 Language/zh-Hans useStatusBar/true",
+    "os": {
+      "name": "android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "alipay",
+      "version": "10.1.18.708"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "537.36"
+    }
+  },
+  "ios iphone qqbrowser": {
+    "ua": "Mozilla/5.0 (iPhone 5CGSM; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 MQQBrowser/7.7.1 Mobile/14G60 Safari/8536.25 MttCustomUA/2 QBWebViewType/1 WKType/1",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "qqbrowser",
+      "version": "7.7.1"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone safari": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 Mobile/14G60 Safari/602.1",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "safari",
+      "version": "10.0"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone qq": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 QQ/7.1.5.428 V1_IPH_SQ_7.1.5_1_APP_A Pixel/640 Core/UIWebView NetType/WIFI QBWebViewType/1",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "qq",
+      "version": "7.1.5.428"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone wechat": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.5.12 NetType/WIFI Language/zh_CN",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "wechat",
+      "version": "6.5.12"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone alipay": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 Nebula PSDType(1) AlipayDefined(nt:WIFI,ws:320|504|2.0) AliApp(AP/10.0.19.062202) AlipayClient/10.0.19.062202 Language/zh-Hans",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "alipay",
+      "version": "10.0.19.062202"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone baidu": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 baiduboxapp/10.3.9.11 (Baidu; P2 10.3.3)",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "baidu",
+      "version": "10.3.9.11"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone baidubrowser": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10. Mobile/14G60 Safari/600.1.4 baidubrowser/4.13.0.16 (Baidu; P2 10.3.3)",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "baidubrowser",
+      "version": "4.13.0.16"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "ios iphone sogou": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 SogouMobileBrowser/5.11.10",
+    "os": {
+      "name": "ios",
+      "version": "10.3.3",
+      "device": "iphone"
+    },
+    "browser": {
+      "name": "sogou",
+      "version": "5.11.10"
+    },
+    "browserEngine": {
+      "name": "webkit",
+      "version": "603.3.8"
+    }
+  },
+  "unknown browser": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0)",
+    "os": {
+      "name": "windows",
+      "version": "xp"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "7.0"
+    },
+    "browserEngine": {}
+  },
+  "unknown engine": {
+    "ua": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0)",
+    "os": {
+      "name": "windows",
+      "version": "xp"
+    },
+    "browser": {
+      "name": "ie",
+      "version": "7.0"
+    },
+    "browserEngine": {}
+  },
+  "Symbian OS": {
+    "ua": "Nokia5320/04.13 (SymbianOS/9.3; U; Series60/3.2 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
+    "os": {},
+    "browser": {},
+    "browserEngine": {
+      "name": "webkit",
+      "version": "413"
+    }
+  },
+  "opera mobi": {
+    "ua": "Opera/9.80 (Android 4.0.3; Linux; Opera Mobi/ADR-1210241554) Presto/2.11.355 Version/12.10",
+    "os": {
+      "name": "android",
+      "version": "4.0.3"
+    },
+    "browser": {
+      "name": "opera",
+      "version": "9.80"
+    },
+    "browserEngine": {
+      "name": "presto",
+      "version": "2.11.355"
     }
   }
 }
