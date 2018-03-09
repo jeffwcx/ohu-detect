@@ -196,13 +196,15 @@ var Detector = function () {
         var mg = _this.ua.match(new RegExp(item.match, 'i'));
         if (mg !== null) {
           result.name = item.name;
-          for (var i = 1, j = 0; i < mg.length; i += 1, j += 1) {
-            var matchName = item.order[j];
-            var matchResult = mg[i];
-            if (item.process && item.process[matchName]) {
-              matchResult = item.process[matchName](matchResult);
+          if (item.order) {
+            for (var i = 0, j = 1; i < item.order.length; i += 1, j += 1) {
+              var matchName = item.order[i];
+              var matchResult = mg[j];
+              if (item.process && item.process[matchName]) {
+                matchResult = item.process[matchName](matchResult);
+              }
+              result[matchName] = matchResult;
             }
-            result[item.order[j]] = matchResult;
           }
           // if has branches
           if (item.branches) {
@@ -502,15 +504,12 @@ function version(str) {
 }
 
 function device(str) {
-  if (str && typeof str === 'string') {
-    return str.toLowerCase();
-  }
-  return str;
+  return str.toLowerCase();
 }
 
 /* harmony default export */ __webpack_exports__["a"] = ([{
   name: 'os x',
-  match: '\\((\\w+);.*mac os x ([0-9_]+)',
+  match: '\\((\\w+);.*mac os x ([0-9_\\.]+)',
   order: ['device', 'version'],
   process: {
     version: version,
@@ -518,7 +517,7 @@ function device(str) {
   }
 }, {
   name: 'ios',
-  match: '\\((\\w+);.*os ([0-9_]+) like mac os x',
+  match: '\\((\\w+)(?:;|\\s).*os ([0-9_\\.]+) like mac os x',
   order: ['device', 'version'],
   process: {
     version: version,
@@ -534,23 +533,24 @@ function device(str) {
   }]
 }, {
   name: 'windows',
-  match: 'windows',
-  branches: [{
-    name: 'windows xp',
-    match: 'windows nt 5\\.[12]'
-  }, {
-    name: 'windows vista',
-    match: 'windows vista nt6\\.0'
-  }, {
-    name: 'windows 7',
-    match: 'windows nt 6\\.1'
-  }, {
-    name: 'windows 8',
-    match: 'windows nt 6\\.[23]'
-  }, {
-    name: 'windows 10',
-    match: 'windows nt (6\\.4|10)'
-  }]
+  match: 'windows nt ([0-9.]+)',
+  order: ['version'],
+  process: {
+    version: function version(str) {
+      if (str === '5.1' || str === '5.2') {
+        return 'xp';
+      } else if (str === '6.0') {
+        return 'vista';
+      } else if (str === '6.1') {
+        return '7';
+      } else if (str === '6.2' || str === '6.3') {
+        return '8';
+      } else if (str === '6.4' || str === '10.0') {
+        return '10';
+      }
+      return 'nt' + str;
+    }
+  }
 }]);
 
 /***/ }),
@@ -581,69 +581,83 @@ function device(str) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-function isMobile(str) {
-  if (str) {
-    return true;
-  }
-  return false;
-}
 
-/* harmony default export */ __webpack_exports__["a"] = ([{
+/* harmony default export */ __webpack_exports__["a"] = ([
+// qq browser
+{
+  name: 'qq',
+  match: '\\sqq\\/([0-9.]+)\\s',
+  order: ['version']
+}, {
+  name: 'wechat',
+  match: 'micromessenger\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'qqbrowser',
+  match: 'mqqbrowser\\/([0-9.]+)',
+  order: ['version']
+},
+// uc
+{
+  name: 'alipay',
+  match: 'alipayclient\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'uc',
+  match: 'ucbrowser\\/([0-9.]+)',
+  order: ['version']
+},
+// baidu
+{
+  name: 'baidu',
+  match: 'baiduboxapp\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'baidubrowser',
+  match: 'baidubrowser\\/([0-9.]+)',
+  order: ['version']
+},
+// liebao
+{
+  name: 'liebao',
+  match: 'liebaofast\\/([0-9.]+)',
+  order: ['version']
+},
+// sougou
+{
+  name: 'sogou',
+  match: 'sogoumobilebrowser\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'opera',
+  match: 'opr\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'edge',
+  match: 'edge\\/([0-9.]+)',
+  order: ['version']
+}, {
+  name: 'chrome',
+  match: 'chrome\\/([0-9.]+)',
+  order: ['version']
+},
+// ie11 special
+{
+  name: 'ie',
+  match: 'rv:(11.0)',
+  order: ['version']
+}, {
+  name: 'ie',
+  match: 'msie\\s([0-9.]+)',
+  order: ['version']
+}, {
   name: 'firefox',
   match: 'firefox\\/([0-9.]+)',
   order: ['version']
 }, {
-  name: 'ie',
-  match: 'msie ([0-9.]+);.*(iemobile)?',
-  order: ['version', 'isMobile'],
-  process: {
-    isMobile: isMobile
-  }
-}, {
   name: 'safari',
-  match: 'version\\/([0-9.]+) (mobile.+)?safari',
-  order: ['version', 'isMobile'],
-  process: {
-    isMobile: isMobile
-  }
-}, {
-  name: 'chrome',
-  match: 'chrome\\/([0-9.]+) (mobile)?',
-  order: ['version', 'isMobile'],
-  process: {
-    isMobile: isMobile
-  },
-  branches: [{
-    name: 'opera',
-    match: 'opr\\/([0-9.]+)',
-    order: ['version']
-  }, {
-    name: 'uc',
-    match: 'ucbrowser\\/([0-9.]+)',
-    order: ['version'],
-    branches: [{
-      name: 'alipay',
-      match: 'alipayclient\\/([0-9.]+)',
-      order: ['version']
-    }]
-  }, {
-    name: 'qqbrowser',
-    match: 'mqqbrowser\\/([0-9.]+)',
-    order: ['version'],
-    branches: [{
-      name: 'qq',
-      match: 'qq\\/([0-9.]+)',
-      order: ['version']
-    }, {
-      name: 'wechat',
-      match: 'micromessenger\\/([0-9]+)',
-      order: ['version']
-    }]
-  }, {
-    name: 'liebao',
-    match: 'liebaofast\\/([0-9]+)',
-    order: ['version']
-  }]
+  match: 'version\\/([0-9.]+).*safari',
+  order: ['version']
 }, {
   name: 'opera',
   match: 'opera\\/([0-9.]+)',
