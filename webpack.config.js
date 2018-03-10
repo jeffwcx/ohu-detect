@@ -7,13 +7,15 @@ const ENV = process.env.NODE_ENV
 console.log('Build environment is ' + ENV)
 var config = {
   entry: {
-    'ohu-detect': './src/index.js'
+    'ohu-detect': './src/index.js',
+    'ohu-detect.full': './src/full.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    library: 'ohu',
-    libraryTarget: 'umd'
+    library: 'Detector',
+    libraryTarget: 'umd',
+    libraryExport: 'default'
   },
   module: {
     rules: [
@@ -41,7 +43,8 @@ if (ENV === 'min') {
     sourceMap: true
   }), new BundleAnalyzerPlugin())
   config.entry = {
-    'ohu-detect.min': './src/index.js'
+    'ohu-detect.min': './src/index.js',
+    'ohu-detect.full.min': './src/full.js'
   }
 }
 

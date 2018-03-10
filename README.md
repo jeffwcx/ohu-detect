@@ -5,10 +5,8 @@
 ### In es6+ (you can use it in browser or node)
 
 ``` javascript
-import { Detect } from 'ohu-detect'
-const detector = new Detect(navigator.userAgent)
-detector.os
-detector.browser
+import Detector from 'ohu-detect'
+const detector = new Detector(navigator.userAgent)
 
 ```
 
@@ -46,11 +44,22 @@ detector.browserEngine
 ### In browser
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/ohu-detect/dist/ohu-detect.min.css">
+<link rel="stylesheet" href="https://unpkg.com/ohu-detect/dist/ohu-detect.min.js">
 <script>
-  var detector = new ohu.Detector(navigator.userAgent)
+  var detector = new Detector(navigator.userAgent)
 </script>
 ```
+
+some people may want to detect more browsers, so I write another version.
+
+``` html
+<link rel="stylesheet" href="https://unpkg.com/ohu-detect/dist/ohu-detect.full.min.js">
+<script>
+  var detector = new Detector(navigator.userAgent)
+</script>
+```
+
+By this way, you can detect more browsers or webviews, most of which are popular mobile browsers in China. You can see the full version of browser list in `Support` section below.
 
 ## Support
 
@@ -95,7 +104,7 @@ detector.browserEngine
 + safari
 + opera
 
-following is popular browsers in China
+following is popular mobile browsers in China
 
 + qqbrowser(QQ手机浏览器)
 + qq(QQ内置浏览器)

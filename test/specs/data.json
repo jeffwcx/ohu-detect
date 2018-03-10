@@ -9,6 +9,10 @@
       "name": "chrome",
       "version": "63.0.3239.132"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "63.0.3239.132"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -21,6 +25,10 @@
       "version": "10"
     },
     "browser": {
+      "name": "ie",
+      "version": "11.0"
+    },
+    "baseBrowser": {
       "name": "ie",
       "version": "11.0"
     },
@@ -39,6 +47,10 @@
       "name": "edge",
       "version": "16.16299"
     },
+    "baseBrowser": {
+      "name": "edge",
+      "version": "16.16299"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -51,6 +63,10 @@
       "version": "10"
     },
     "browser": {
+      "name": "firefox",
+      "version": "60.0"
+    },
+    "baseBrowser": {
       "name": "firefox",
       "version": "60.0"
     },
@@ -69,6 +85,10 @@
       "name": "chrome",
       "version": "64.0.3282.186"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "64.0.3282.186"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -81,6 +101,10 @@
       "version": "7"
     },
     "browser": {
+      "name": "firefox",
+      "version": "58.0"
+    },
+    "baseBrowser": {
       "name": "firefox",
       "version": "58.0"
     },
@@ -99,6 +123,10 @@
       "name": "opera",
       "version": "51.0.2830.40"
     },
+    "baseBrowser": {
+      "name": "opera",
+      "version": "51.0.2830.40"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -111,6 +139,10 @@
       "version": "7"
     },
     "browser": {
+      "name": "ie",
+      "version": "8.0"
+    },
+    "baseBrowser": {
       "name": "ie",
       "version": "8.0"
     },
@@ -129,6 +161,10 @@
       "name": "ie",
       "version": "6.0"
     },
+    "baseBrowser": {
+      "name": "ie",
+      "version": "6.0"
+    },
     "browserEngine": {}
   },
   "windows vista ie8": {
@@ -138,6 +174,10 @@
       "version": "vista"
     },
     "browser": {
+      "name": "ie",
+      "version": "8.0"
+    },
+    "baseBrowser": {
       "name": "ie",
       "version": "8.0"
     },
@@ -156,6 +196,10 @@
       "name": "ie",
       "version": "9.0"
     },
+    "baseBrowser": {
+      "name": "ie",
+      "version": "9.0"
+    },
     "browserEngine": {
       "name": "trident",
       "version": "5.0"
@@ -168,6 +212,10 @@
       "version": "nt6.5"
     },
     "browser": {
+      "name": "ie",
+      "version": "9.0"
+    },
+    "baseBrowser": {
       "name": "ie",
       "version": "9.0"
     },
@@ -187,6 +235,10 @@
       "name": "firefox",
       "version": "58.0"
     },
+    "baseBrowser": {
+      "name": "firefox",
+      "version": "58.0"
+    },
     "browserEngine": {
       "name": "gecko",
       "version": "20100101"
@@ -200,6 +252,10 @@
       "version": "10.13.3"
     },
     "browser": {
+      "name": "opera",
+      "version": "51.0.2830.40"
+    },
+    "baseBrowser": {
       "name": "opera",
       "version": "51.0.2830.40"
     },
@@ -219,6 +275,10 @@
       "name": "chrome",
       "version": "65.0.3325.146"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "65.0.3325.146"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -232,6 +292,10 @@
       "version": "10.13.3"
     },
     "browser": {
+      "name": "safari",
+      "version": "11.0.3"
+    },
+    "baseBrowser": {
       "name": "safari",
       "version": "11.0.3"
     },
@@ -251,6 +315,10 @@
       "name": "safari",
       "version": "11.0"
     },
+    "baseBrowser": {
+      "name": "safari",
+      "version": "11.0"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "604.1.38"
@@ -264,6 +332,10 @@
       "version": "11.0"
     },
     "browser": {
+      "name": "safari",
+      "version": "11.0"
+    },
+    "baseBrowser": {
       "name": "safari",
       "version": "11.0"
     },
@@ -282,6 +354,10 @@
       "name": "chrome",
       "version": "65.0.3325.146"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "65.0.3325.146"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -296,6 +372,10 @@
     "browser": {
       "name": "qqbrowser",
       "version": "8.2"
+    },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "57.0.2987.132"
     },
     "browserEngine": {
       "name": "webkit",
@@ -312,6 +392,10 @@
       "name": "uc",
       "version": "11.8.9.969"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "57.0.2987.108"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -326,6 +410,10 @@
     "browser": {
       "name": "sogou",
       "version": "5.11.8"
+    },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "56.0.2924.116"
     },
     "browserEngine": {
       "name": "webkit",
@@ -342,6 +430,10 @@
       "name": "liebao",
       "version": "4.59.2"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "59.0.3071.125"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -356,6 +448,10 @@
     "browser": {
       "name": "baidu",
       "version": "10.3.6.13"
+    },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "48.0.2564.116"
     },
     "browserEngine": {
       "name": "webkit",
@@ -372,6 +468,10 @@
       "name": "baidubrowser",
       "version": "7.18.11.0"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "48.0.2564.116"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -386,6 +486,10 @@
     "browser": {
       "name": "qq",
       "version": "7.5.0.3430"
+    },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "57.0.2987.132"
     },
     "browserEngine": {
       "name": "webkit",
@@ -402,6 +506,10 @@
       "name": "wechat",
       "version": "6.6.5.1280"
     },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "57.0.2987.132"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "537.36"
@@ -416,6 +524,10 @@
     "browser": {
       "name": "alipay",
       "version": "10.1.18.708"
+    },
+    "baseBrowser": {
+      "name": "chrome",
+      "version": "40.0.2214.89"
     },
     "browserEngine": {
       "name": "webkit",
@@ -433,6 +545,10 @@
       "name": "qqbrowser",
       "version": "7.7.1"
     },
+    "baseBrowser": {
+      "name": "safari",
+      "version": "10.0"
+    },
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -446,6 +562,10 @@
       "device": "iphone"
     },
     "browser": {
+      "name": "safari",
+      "version": "10.0"
+    },
+    "baseBrowser": {
       "name": "safari",
       "version": "10.0"
     },
@@ -465,6 +585,7 @@
       "name": "qq",
       "version": "7.1.5.428"
     },
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -481,6 +602,7 @@
       "name": "wechat",
       "version": "6.5.12"
     },
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -497,6 +619,7 @@
       "name": "alipay",
       "version": "10.0.19.062202"
     },
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -513,6 +636,7 @@
       "name": "baidu",
       "version": "10.3.9.11"
     },
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -528,6 +652,10 @@
     "browser": {
       "name": "baidubrowser",
       "version": "4.13.0.16"
+    },
+    "baseBrowser": {
+      "name": "safari",
+      "version": "10."
     },
     "browserEngine": {
       "name": "webkit",
@@ -545,6 +673,7 @@
       "name": "sogou",
       "version": "5.11.10"
     },
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "603.3.8"
@@ -560,6 +689,10 @@
       "name": "ie",
       "version": "7.0"
     },
+    "baseBrowser": {
+      "name": "ie",
+      "version": "7.0"
+    },
     "browserEngine": {}
   },
   "unknown engine": {
@@ -572,12 +705,17 @@
       "name": "ie",
       "version": "7.0"
     },
+    "baseBrowser": {
+      "name": "ie",
+      "version": "7.0"
+    },
     "browserEngine": {}
   },
   "Symbian OS": {
     "ua": "Nokia5320/04.13 (SymbianOS/9.3; U; Series60/3.2 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
     "os": {},
     "browser": {},
+    "baseBrowser": {},
     "browserEngine": {
       "name": "webkit",
       "version": "413"
@@ -590,6 +728,10 @@
       "version": "4.0.3"
     },
     "browser": {
+      "name": "opera",
+      "version": "9.80"
+    },
+    "baseBrowser": {
       "name": "opera",
       "version": "9.80"
     },

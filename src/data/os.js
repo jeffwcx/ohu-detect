@@ -28,7 +28,7 @@ export default [
   {
     name: 'linux',
     match: 'linux',
-    branches: [
+    post: [
       {
         name: 'android',
         match: 'android ([0-9.]+)',
