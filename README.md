@@ -1,5 +1,7 @@
 # ohu-detect
 
+Detect your browser!
+
 ## Usage
 
 ### In es6+ (you can use it in browser or node)
@@ -44,7 +46,7 @@ detector.browserEngine
 ### In browser
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/ohu-detect/dist/ohu-detect.min.js">
+<script src="https://unpkg.com/ohu-detect/dist/ohu-detect.min.js"></script>
 <script>
   var detector = new Detector(navigator.userAgent)
 </script>
@@ -53,7 +55,7 @@ detector.browserEngine
 some people may want to detect more browsers, so I write another version.
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/ohu-detect/dist/ohu-detect.full.min.js">
+<script src="https://unpkg.com/ohu-detect/dist/ohu-detect.full.min.js"></script>
 <script>
   var detector = new Detector(navigator.userAgent)
 </script>
@@ -122,3 +124,4 @@ following is popular mobile browsers in China
 + gecko
 + webkit
 + presto
+
