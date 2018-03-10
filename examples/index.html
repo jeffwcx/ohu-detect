@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detect your browser</title>
+  <link rel="stylesheet" href="https://unpkg.com/post-style/lib/post.min.css">
+</head>
+<body>
+<article class="markdown">
+  <table>
+    <thead>
+      <tr>
+        <th>information</th>
+        <th>operating system</th>
+        <th>browser</th>
+        <th>browser engine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="name">
+        <td>name</td>
+      </tr>
+      <tr class="version">
+        <td>version</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+<script src="https://unpkg.com/ohu-detect/dist/ohu-detect.full.min.js"></script>
+<script>
+  var detector = new Detector(navigator.userAgent)
+  var nameEl = document.querySelector('.name')
+  var versionEl = document.querySelector('.version')
+  var infoArr = ['os', 'browser', 'browserEngine']
+  var l = infoArr.length
+  for (var i = 0; i < l; i += 1) {
+    var td = document.createElement('td')
+    td.innerText = detector[infoArr[i]].name
+    nameEl.appendChild(td)
+  }
+  for (var i = 0; i < l; i += 1) {
+    var td = document.createElement('td')
+    td.innerText = detector[infoArr[i]].version || ''
+    versionEl.appendChild(td)
+  }
+</script>
+</body>
+</html>
