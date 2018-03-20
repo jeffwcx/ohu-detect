@@ -8,7 +8,7 @@ console.log('Build environment is ' + ENV)
 var config = {
   entry: {
     'ohu-detect': './src/index.js',
-    'ohu-detect.full': './src/full.js'
+    'ohu-detect.base': './src/base.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -28,7 +28,6 @@ var config = {
       }
     ]
   },
-  devtool: '#source-map',
   plugins: [
     new webpack.BannerPlugin(`${meta.name} v${meta.version}
 author ${meta.author}`)
@@ -44,7 +43,7 @@ if (ENV === 'min') {
   }), new BundleAnalyzerPlugin())
   config.entry = {
     'ohu-detect.min': './src/index.js',
-    'ohu-detect.full.min': './src/full.js'
+    'ohu-detect.base.min': './src/base.js'
   }
 }
 

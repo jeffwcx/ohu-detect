@@ -52,16 +52,14 @@ detector.browserEngine
 </script>
 ```
 
-some people may want to detect more browsers, so I write another version.
+Some people may just want to detect basic browsers, so I write another version.
 
 ``` html
-<script src="https://unpkg.com/ohu-detect/dist/ohu-detect.full.min.js"></script>
+<script src="https://unpkg.com/ohu-detect/dist/ohu-detect.base.min.js"></script>
 <script>
   var detector = new Detector(navigator.userAgent)
 </script>
 ```
-
-By this way, you can detect more browsers or webviews, most of which are popular mobile browsers in China. You can see the full version of browser list in `Support` section below.
 
 ## Support
 
