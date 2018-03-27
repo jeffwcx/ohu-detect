@@ -27,6 +27,8 @@
       </tr>
     </tbody>
   </table>
+
+  <textarea id="textarea" cols="80" rows="10" style="font-size: 16px;"></textarea>
 </article>
 <script src="https://unpkg.com/ohu-detect/dist/ohu-detect.min.js"></script>
 <script>
@@ -45,6 +47,8 @@
     td.innerText = detector[infoArr[i]].version || ''
     versionEl.appendChild(td)
   }
+  const textEl = document.getElementById('textarea')
+  textEl.value = detector.ua
 </script>
 </body>
 </html>
